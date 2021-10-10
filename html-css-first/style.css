@@ -1,0 +1,217 @@
+/* ------variables------- */
+:root {
+  --clr--prime-opacity: rgba(240, 234, 210, 0.3);
+  --clr--prime: #f0ead2;
+  --clr--second: #dde5b6;
+  --clr--third: #a98467;
+  --clr--hover: #6c584c;
+  --margin-header: calc((100% - 80%) / 2);
+}
+/* ------base elements styles------- */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  max-width: 80%;
+  margin: 0 auto;
+}
+p {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2.6;
+}
+
+a {
+  color: var(--clr--third);
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+
+/*----- header------ */
+
+.header ul {
+  margin-right: 5rem;
+}
+ul li {
+  padding: 1rem;
+  list-style: none;
+}
+.header-container {
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  right: calc(var(--margin-header));
+  left: calc(var(--margin-header));
+
+  height: 10rem;
+  background: var(--clr--prime-opacity);
+}
+.header {
+  max-width: 100%;
+  height: 10rem;
+}
+
+header img {
+  width: 8rem;
+  margin: 0 2rem;
+}
+header a {
+  transition: all 0.2s linear;
+}
+a:hover {
+  color: var(--clr--hover);
+  border-bottom: 2px var(--clr--hover) solid;
+}
+
+/* ------  banner -------- */
+
+.banner p {
+  padding: 2rem 10rem;
+  background: var(--clr--third);
+}
+.banner {
+  background: var(--clr--third);
+}
+
+/* ------Cards------- */
+
+section h2 {
+  width: 40rem;
+  margin: 0 auto;
+  padding: 6rem;
+}
+
+section .cards {
+  max-width: 95%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.card {
+  flex-direction: column;
+  margin: 2rem;
+  background: var(--clr--third);
+  text-align: center;
+  height: 26rem;
+  flex: 1 26rem;
+  max-width: 26rem;
+}
+.card h3 {
+  padding: 0.5rem 0;
+}
+
+.card .small-container {
+  justify-content: center;
+  width: 17rem;
+  height: 17rem;
+  margin: 0 auto;
+  background: var(--clr--second);
+}
+.card p {
+  font-size: 1.4rem;
+  padding: 0.2rem;
+}
+
+/* ------Form ------ */
+
+.form {
+  margin: 2rem auto;
+  width: 35rem;
+  background: var(--clr--third);
+}
+.form h4 {
+  text-align: start;
+
+  padding: 1rem;
+}
+.form p {
+  text-align: start;
+  padding: 1rem;
+  font-size: 1.4rem;
+}
+
+form::after {
+  content: "";
+  position: absolute;
+  top: 0.2rem;
+  left: 0;
+  right: 0;
+  background: black;
+  height: 0.2px;
+  width: 100%;
+}
+form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.label {
+  color: var(--clr--second);
+}
+.label-input {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 60%;
+}
+
+.form-control {
+  height: 3rem;
+  width: 30rem;
+  padding: 1rem 0 0.5rem 0.5rem;
+  font-size: 1.6rem;
+}
+.form-btn {
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  margin: 1rem auto;
+  border-radius: 10px;
+  border: 1px var(--clr--second) solid;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.form-btn:hover {
+  background: var(--clr--second);
+}
+
+/* media */
+
+@media all and (max-width: 55rem) {
+  .banner p {
+    padding: 2rem 1rem;
+  }
+  .header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header ul {
+    margin-right: 0;
+  }
+}
+
+/* ------- flex ------- */
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
